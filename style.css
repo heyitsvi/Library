@@ -1,0 +1,92 @@
+h1{ 
+    display: flex;
+    font-size: 60px;
+    font-family: Helvetica, sans-serif;
+    font-weight:500;
+    color: white;
+    border:solid;
+    border-color: white;
+    border-radius: 10px;
+    /* max-width: auto; */
+    min-width: fit-content;
+    width: 50%;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+body {
+    background: lightblue;
+}
+
+#container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "input display";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#container > #input{
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding: 10px;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:solid;
+    border-radius: 10px;
+    margin-top: 2%;
+    max-width: 80%;
+    width: 60%;
+    min-width: fit-content;
+    height: 1fr;
+    max-height: 1fr;
+    border-color: white;
+    color:lightseagreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    flex-wrap: nowrap;
+}
+
+input[type="text"],input[type="number"]{
+    /* -webkit-appearance: none; */
+    background-color:white;
+    border-radius: 10px;
+    border:none;
+    width: 400px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+input[type="radio"]{
+    align-self: center;
+    margin-left: 25%;
+}
+
+#input > #add{
+    align-self: center;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    background: transparent;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 3rem;
+    cursor: pointer;
+    border:solid;
+    text-align: center;
+    -webkit-appearance:none;
+}
+#input > #add:hover{
+    background: rgb(124, 207, 235);
+}
+
+#container > #display{
+    grid-area: display;
+}
