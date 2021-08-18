@@ -11,9 +11,18 @@
 <body>
     <h1>Library</h1>
     <div id="container">
-        <div id="input">
+        <div  id="add-book">
+            <button id="add-btn">+</button>
+        </div>
+        <div id ="display">
+            display
+        </div>
+    </div>
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <button id="close">X</button>
             <div id="title">
-                <div>Enter the title of the book</div>
+                 <div>Enter the title of the book</div>
                 <input type="text" name = "title">
             </div>
             <div id="author">
@@ -23,7 +32,7 @@
             <div id="pages">
                 <div>Enter the pages in the book</div>
                 <input type="number" name="pages">
-            </div>
+             </div>
             <div id="read">
                 <div>Have you read the book?</div>
                 <input type="radio" value="Yes" name="read">
@@ -32,9 +41,6 @@
                 <label for="no">No</label>
             </div>
             <button id="add">Add Book</button>
-        </div>
-        <div id="display">
-            <div>display</div>
         </div>
     </div>
 </body>

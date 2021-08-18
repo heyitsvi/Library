@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
 h1{ 
     display: flex;
     font-size: 60px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight:500;
     color: white;
     border:solid;
@@ -22,35 +24,44 @@ body {
 #container{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3.5fr;
     grid-template-areas: "input display";
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
 }
 
-#container > #input{
+#add-book{
     grid-area: input;
     display: flex;
     flex-direction: column;
     height: 80vh;
     padding: 10px;
-    align-items: baseline;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     border:solid;
     border-radius: 10px;
     margin-top: 2%;
-    max-width: 80%;
     width: 60%;
     min-width: fit-content;
-    height: 1fr;
+    height: 550px;
     max-height: 1fr;
     border-color: white;
-    color:lightseagreen;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    font-weight: 500;
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
     flex-wrap: nowrap;
+}
+
+#add-btn{
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 80px;
+    background: transparent;
+    appearance: none;
+    border-color: white;
+    border-radius: 10rem;
+    height: 100px;
+    width: 100px;
+    color: coral;
 }
 
 input[type="text"],input[type="number"]{
@@ -60,7 +71,7 @@ input[type="text"],input[type="number"]{
     border:none;
     width: 400px;
     height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
 input[type="radio"]{
@@ -68,7 +79,7 @@ input[type="radio"]{
     margin-left: 25%;
 }
 
-#input > #add{
+.modal > #add{
     align-self: center;
     display: inline-block;
     border: none;
@@ -76,17 +87,46 @@ input[type="radio"]{
     margin: 0;
     background: transparent;
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     cursor: pointer;
     border:solid;
     text-align: center;
     -webkit-appearance:none;
 }
-#input > #add:hover{
+.modal > #add:hover{
     background: rgb(124, 207, 235);
 }
 
 #container > #display{
     grid-area: display;
+}
+
+.modal-container{
+    /* display: none; */
+    /* background-color: white; */
+    background-color: rgba(176, 217, 231,50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left:0;
+    opacity: 0;
+    pointer-events: none;
+    height:100vh;
+    width:100vw;
+}
+.modal-container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(67, 213, 213);
+    max-width: 100%;
+    padding: 20px 20px;
+    border-radius: 10px;
 }

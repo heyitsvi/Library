@@ -24,3 +24,18 @@ addBook("Song of Ice and Fire","George R.R Martin", "1000","Yes");
 // console.log(my_library);
 
 displayBooks(my_library);
+
+
+let display = document.querySelector("#display");
+
+const addBtn = document.querySelector("#add-btn");
+const modal = document.querySelector("#modal_container");
+const close = document.querySelector("#close");
+
+addBtn.addEventListener("click", () =>{
+    modal_container.classList.add('show');
+})
+
+close.addEventListener("click", ()=>{
+    modal_container.classList.remove('show');
+})
