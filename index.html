@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>Library</h1>
+    <div id="container">
+        <div  id="add-book">
+            <button id="add-btn">+</button>
+        </div>
+        <div id ="display">
+            display
+        </div>
+    </div>
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <button id="close">X</button>
+            <div id="title">
+                 <div>Enter the title of the book</div>
+                <input type="text" name = "title">
+            </div>
+            <div id="author">
+                <div>Enter the name of the author</div>
+                <input type="text" name = "author">
+            </div>
+            <div id="pages">
+                <div>Enter the pages in the book</div>
+                <input type="number" name="pages">
+             </div>
+            <div id="read">
+                <div>Have you read the book?</div>
+                <input type="radio" value="Yes" name="read">
+                <label for="yes">Yes</label>
+                <input type="radio" value="No" name="read" checked>
+                <label for="no">No</label>
+            </div>
+            <button id="add">Add Book</button>
+        </div>
+    </div>
+</body>
+</html>
