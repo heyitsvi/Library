@@ -9,12 +9,12 @@ h1{
     border:solid;
     border-color: white;
     border-radius: 10px;
-    /* max-width: auto; */
     min-width: fit-content;
     width: 50%;
     align-content: center;
     justify-content: center;
     margin: auto;
+    box-shadow: 4px 4px;
 }
 
 body {
@@ -49,6 +49,7 @@ body {
     color:rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
     flex-wrap: nowrap;
+    box-shadow: 4px 4px;
 }
 
 #add-btn{
@@ -103,8 +104,6 @@ input[type="radio"]{
 }
 
 .modal-container{
-    /* display: none; */
-    /* background-color: white; */
     background-color: rgba(176, 217, 231,50%);
     display: flex;
     align-items: center;
@@ -134,6 +133,7 @@ input[type="radio"]{
     height: 60vh;
     justify-content: space-around;
     color: white;
+    box-shadow: 4px 4px white;
 }
 
 .modal > #close{
@@ -146,4 +146,66 @@ input[type="radio"]{
     border:solid;
     border-radius: 50px;
 
+}
+
+#display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border:solid; */
+    border-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 0%;
+}
+
+.book-info{
+    background-color: white;
+    height: 120px;
+    border: solid;
+    border-color: skyblue;
+    border-radius: 10px;
+    width: 95%;
+    box-shadow: 2px 4px 20px -5px black;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title author pages read removeBtn";
+    align-items: center;
+    justify-items: center;
+}
+
+#bookname{
+    grid-area: title;
+}
+
+#authorname{
+    grid-area: author;
+}
+
+#pages {
+    grid-area: pages;
+}
+
+#read {
+    grid-area: read;
+}
+
+.removeBtn, .readBtn{
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 25px;
+    background: transparent;
+    appearance: none;
+    border-color: cyan;
+    border-radius: 10rem;
+    height: 50px;
+    width: 50px;
+    color: coral;
+}
+
+.readBtn{
+    height: 50px;
+    width: 50px;
 }
