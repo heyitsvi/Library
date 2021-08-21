@@ -23,11 +23,31 @@ body {
 
 #container{
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-columns: 1fr 3.5fr;
-    grid-template-areas: "input display";
+    grid-template-areas: "input label"
+                        "input display";
     font-family: 'Poppins', sans-serif;
     font-size: large;
+}
+
+#labels{
+    grid-area: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: 50px;
+    margin-top:10px;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
+    white-space: nowrap;
+    border:solid;
+    border-color:white;
+    box-shadow: 4px 4px white;
+    margin-right: 4.5%;
+    margin-left: 0.75%;
+    color: black;
+
 }
 
 #add-book{
@@ -209,3 +229,4 @@ input[type="radio"]{
     height: 50px;
     width: 50px;
 }
+

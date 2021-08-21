@@ -15,14 +15,13 @@ function addBook(title,author,pages,read){
 }
 
 
-addBook("LOTR","J.R.R Tolkein", "500","Yes");
-
-
 let display = document.querySelector("#display");
 
 const addBtn = document.querySelector("#add-btn");
 const close = document.querySelector("#close");
 const addBookBtn = document.querySelector("#add");
+
+
 
 function displayBooks(size){
     let div_list = [];
@@ -32,14 +31,7 @@ function displayBooks(size){
     appendDivs(display,div_list);
 
     fillInfo(display);
-    removeBtns = document.querySelectorAll(".removeBtn");
-    removeBtns.forEach(button => {
-        button.addEventListener("click", event =>{
-            let child = document.getElementById(`book-${button.id}`)
-            display.removeChild(child);
-            removeElement(button.id);
-        })
-    })
+
     readBtns = document.querySelectorAll(".readBtn");
     readBtns.forEach(button => {
         button.addEventListener("click", event =>{
@@ -53,6 +45,22 @@ function displayBooks(size){
                 button.textContent = "Yes";
                 changeStatus(id,"Yes");
             }
+        })
+    })
+
+    removeBtn();
+
+}
+
+removeBtn();
+
+function removeBtn(){
+    removeBtns = document.querySelectorAll(".removeBtn");
+    removeBtns.forEach(button => {
+        button.addEventListener("click", event =>{
+            let child = document.getElementById(`book-${button.id}`)
+            display.removeChild(child);
+            removeElement(button.id);
         })
     })
 }
@@ -132,7 +140,6 @@ function bookDivs(id){
 
 function changeStatus(id,value){
     my_library[id-1].read = value;
-    // console.log(my_library[id-1].read);
 }
 
 function appendDivs(parent,child){
@@ -157,7 +164,6 @@ function fillInfo(display){
         })
     }
 }
-
 
 
 
