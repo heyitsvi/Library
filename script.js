@@ -2,6 +2,9 @@ let my_library = [];
 let removeBtns = undefined; 
 let readBtns = undefined;
 
+
+
+
 function Book(title, author,pages,read){
     this.title = title;
     this.author = author;
@@ -73,6 +76,7 @@ function clearInput(){
     document.querySelector('#input-title').value = null;
     document.querySelector('#input-author').value= null;
     document.querySelector('#input-pages').value = null;
+    document.querySelector("#error").textContent = '';
 }
 
 addBookBtn.addEventListener("click",event => {
@@ -81,6 +85,7 @@ addBookBtn.addEventListener("click",event => {
     let pages = document.querySelector('#input-pages').value; 
     let yes = document.querySelector("#input-read-yes");
     let no = document.querySelector("#input-read-no");
+    let error = document.querySelector("#error");
     let read=undefined;
     if(yes.checked == true){
         read = yes.value;
@@ -88,10 +93,16 @@ addBookBtn.addEventListener("click",event => {
     else{
         read=no.value;
     }
-    addBook(title,author,pages,read);
-    let size = my_library.length;
-    displayBooks(size);
-    clearInput();
+    if (title == '' || author == ''){
+        event.preventDefault();
+        error.textContent = "Title and Author are required";
+    }
+    else{
+        addBook(title,author,pages,read);
+        let size = my_library.length;
+        displayBooks(size);
+        clearInput();
+    }
 })
 
 
@@ -164,7 +175,6 @@ function fillInfo(display){
         })
     }
 }
-
 
 
 

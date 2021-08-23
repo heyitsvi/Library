@@ -100,12 +100,11 @@ input[type="radio"]{
     margin-left: 20%;
 }
 
-.modal > #add{
+#add{
     align-self: center;
-    display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin: 0;
+    justify-self: center ;
     background: transparent;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -115,7 +114,7 @@ input[type="radio"]{
     text-align: center;
     -webkit-appearance:none;
 }
-.modal > #add:hover{
+#add:hover{
     background: rgb(124, 207, 235);
 }
 
@@ -150,13 +149,13 @@ input[type="radio"]{
     padding: 20px 20px;
     border-radius: 10px;
     font-size: 30px;
-    height: 60vh;
+    height: auto;
     justify-content: space-around;
     color: white;
     box-shadow: 4px 4px white;
 }
 
-.modal > #close{
+#close{
     background: transparent;
     color: white;
     width: 30px;
@@ -230,3 +229,7 @@ input[type="radio"]{
     width: 50px;
 }
 
+#error{
+    font-size: 25px;
+    color:white;
+}

@@ -25,29 +25,32 @@
         </div>
     </div>
     <div class="modal-container" id="modal_container">
-        <div class="modal">
-            <button id="close">X</button>
-            <div id="title">
-                 <div>Enter the title of the book</div>
-                <input type="text" id="input-title" name = "title" required>
+            <div class="modal">
+                <button id="close">X</button>
+                <div id="error"></div>
+                <!-- <form action="" method ="GET" class="form" id="form"> -->
+                    <div id="title" class="form">
+                        <div>Enter the title of the book</div>
+                        <input type="text" id="input-title" name = "title">
+                    </div>
+                    <div id="author" class="form">
+                        <div>Enter the name of the author</div>
+                        <input type="text" id="input-author" name = "author">
+                    </div>
+                    <div id="pages" class="form">
+                        <div>Enter the pages in the book</div>
+                        <input type="number" id="input-pages" name="pages">
+                    </div>
+                    <div id="read" class="form">
+                        <div>Have you read the book?</div>
+                        <input type="radio" value="Yes" id="input-read-yes" name="read">
+                        <label for="yes">Yes</label>
+                        <input type="radio"  id="input-read-no"  value="No" name="read" checked>
+                        <label for="no">No</label>
+                    </div>
+                    <button type ="submit" id="add" class="form">Add Book</button>
+                <!-- </form> -->
             </div>
-            <div id="author">
-                <div>Enter the name of the author</div>
-                <input type="text" id="input-author" name = "author" required>
-            </div>
-            <div id="pages">
-                <div>Enter the pages in the book</div>
-                <input type="number" id="input-pages" name="pages">
-             </div>
-            <div id="read">
-                <div>Have you read the book?</div>
-                <input type="radio" value="Yes" id="input-read-yes" name="read">
-                <label for="yes">Yes</label>
-                <input type="radio"  id="input-read-no"  value="No" name="read" checked>
-                <label for="no">No</label>
-            </div>
-            <button type ="submit" id="add">Add Book</button>
-        </div>
     </div>
 </body>
 </html>
